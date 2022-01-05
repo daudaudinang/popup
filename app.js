@@ -92,9 +92,11 @@ const createImage = (i, f) => {
 
     if(i){
         const img = new Image;
+        // img.crossOrigin="anonymous";
         img.src = i;
     
         img.onload = () => {
+            img.setAttribute('crossorigin', 'anonymous');
             canvas.width = img.width;
             canvas.height = img.height;
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
