@@ -43,6 +43,11 @@ exitPopupBtn.onclick = (e) => {
     e.preventDefault();
     openPopupBtn.classList.remove('hidden');
     popup.classList.add('hidden');
+    disableCamera();
+
+    interface1.classList.remove('hidden');
+    interface2.classList.add('hidden');
+    interface3.classList.add('hidden');
 }
 
 // Handle In Interface 1
